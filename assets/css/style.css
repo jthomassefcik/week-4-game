@@ -1,0 +1,59 @@
+body, html, .container-fluid {
+         height: 100%;
+         overflow: auto;
+    }
+
+
+#random-number-box {
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+    height: 20%;
+    position: relative;
+    /*clear: both;*/
+    /*width:40%;*/
+
+}
+
+/*#random-number-box :nth-child(1) {
+    margin: 20%;
+}*/
+
+#win-loss-box {
+    background-color: red;
+    color: white;
+    border: 2px solid white;
+    height: 20%;
+    position: relative;
+    
+}
+
+#total-score-label {
+    background-color: blue;
+    color: white;
+    border: 2px solid white;
+    clear: both;
+    height: 5%;
+}
+
+#total-score-box {
+    background-color: green;
+    color: white;
+    border: 2px solid white;
+    height: 15%;
+    margin-bottom: 10px;
+    /*clear: both;*/
+}
+
+img {
+    height: 15%;
+}
+
+#win-loss-box :nth-child(1) {
+    margin-top: 10%;
+}
+
+#win-loss-box :nth-child(2) {
+    margin-top: 10%;
+    
+}
