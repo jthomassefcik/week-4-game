@@ -38,3 +38,16 @@ function assignRandCrystal(num){
     $("#crystal" + num).val(generateRandom());
 
 }
+
+function resetGame() {
+    random_number = 1;
+    user_score = 0;
+    
+    generate_random();
+    generate_Crystal_random();
+    // $("#random-number-box").empty();
+    // $("#wins").empty();
+    // $("losses").empty();
+    $("#total-score-box").empty();
+    $("#total_score_label").empty();
+}

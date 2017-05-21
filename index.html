@@ -34,8 +34,8 @@
 
         <div class="col-lg-8" id="random-number-box"></div>
         <div class="col-lg-4" id="win-loss-box">
-            <div class="col-sm-6">Wins</div>
-            <div class="col-sm-6">Losses</div>
+            <div id="wins"class="col-sm-6">Wins</div>
+            <div id="losses"class="col-sm-6">Losses</div>
         </div>
 
         <img class="col-xs-3 col-sm-3 col-lg-2" id="crystal1" src="#">
@@ -76,28 +76,79 @@
                 user_score = user_score + Number((this.value));
                 $("#total-score-box").html("<p>").html(user_score);
                 console.log(user_score);
+                if (user_score == random_number) {
+                    console.log("winner")
+                    $("#total-score-label").html("<p>").html("YOU WIN!");
+                    wins++;
+                    $("#wins").html("<p>").html(wins);
+                    resetGame();
+                }
+                if (user_score > random_number) {
+                    console.log("loser");
+                    $("#total-score-label").html("<p>").html("YOU LOSE!");
+                    losses++;
+                    $("#losses").html("<p>").html(losses);
+                    resetGame();
+
+                }
             })
             $("#crystal2").on("click", function () {
                 user_score = user_score + Number((this.value));
                 $("#total-score-box").html("<p>").html(user_score);
                 console.log(user_score);
+                if (user_score == random_number) {
+                    console.log("winner")
+                    $("#total-score-label").html("<p>").html("YOU WIN!");
+                    wins++;
+                    $("#wins").html("<p>").html(wins);
+                    resetGame();
+                }
+                if (user_score > random_number) {
+                    console.log("loser");
+                    $("#total-score-label").html("<p>").html("YOU LOSE!");
+                    losses++;
+                    $("#losses").html("<p>").html(losses);
+                    resetGame();
+
+                }
             })
             $("#crystal3").on("click", function () {
                 user_score = user_score + Number((this.value));
                 $("#total-score-box").html("<p>").html(user_score);
                 console.log(user_score);
+                if (user_score == random_number) {
+                    console.log("winner")
+                    $("#total-score-label").html("<p>").html("YOU WIN!");
+                    wins++;
+                    $("#wins").html("<p>").html(wins);
+                    resetGame();
+                }
+                if (user_score > random_number) {
+                    console.log("loser");
+                    $("#total-score-label").html("<p>").html("YOU LOSE!");
+                    losses++;
+                    $("#losses").html("<p>").html(losses);
+                    resetGame();
+
+                }
             })
             $("#crystal4").on("click", function () {
                 user_score = user_score + Number((this.value));
                 $("#total-score-box").html("<p>").html(user_score);
                 if (user_score == random_number) {
                     console.log("winner")
-                    $("#total-score-label").html("<p>").html("YOU WI!");
+                    $("#total-score-label").html("<p>").html("YOU WIN!");
                     wins++;
+                    $("#wins").html("<p>").html(wins);
+                    resetGame();
                 }
                 if (user_score > random_number) {
                     console.log("loser");
                     $("#total-score-label").html("<p>").html("YOU LOSE!");
+                    losses++;
+                    $("#losses").html("<p>").html(losses);
+                    resetGame();
+
                 }
                 console.log(user_score);
             })
