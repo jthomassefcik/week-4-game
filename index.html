@@ -49,23 +49,67 @@
 
     </div>
     <script>
-        var random_number = 0;
-        var crystal1 = 0;
-        var crystal2 = 0;
-        var crystal3 = 0;
-        var crystal4 = 0;
+        var random_number = 1;
+        var user_score = 0;
+        var user_score_display = 0;
+        var wins = 0;
+        var losses = 0;
+        var crystals = {
+            crystal1:0,
+            crystal2:0,
+            crystal3:0,
+            crystal4:0,
+        }
+        // var crystal1 = 0;
+        // var crystal2 = 0;
+        // var crystal3 = 0;
+        // var crystal4 = 0;
         $(document).ready(function () {
             generate_random();
-            $("#crystal1").value = crystal1;
+            generate_Crystal_random();
+            console.log(crystals);
+            var x = crystals[1];
+            console.log(x, $("#crystal1").val(), $("#crystal2").val(),$("#crystal3").val(),$("#crystal4").val());
+            
 
             $("#crystal1").on("click", function () {
-                this.value = crystal1;
-                console.log(this.value);
+                user_score = user_score + Number((this.value));
+                $("#total-score-box").html("<p>").html(user_score);
+                console.log(user_score);
             })
-            $("#crystal1").value = crystal1;
+            $("#crystal2").on("click", function () {
+                user_score = user_score + Number((this.value));
+                $("#total-score-box").html("<p>").html(user_score);
+                console.log(user_score);
+            })
+            $("#crystal3").on("click", function () {
+                user_score = user_score + Number((this.value));
+                $("#total-score-box").html("<p>").html(user_score);
+                console.log(user_score);
+            })
+            $("#crystal4").on("click", function () {
+                user_score = user_score + Number((this.value));
+                $("#total-score-box").html("<p>").html(user_score);
+                if (user_score == random_number) {
+                    console.log("winner")
+                    $("#total-score-label").html("<p>").html("YOU WI!");
+                    wins++;
+                }
+                if (user_score > random_number) {
+                    console.log("loser");
+                    $("#total-score-label").html("<p>").html("YOU LOSE!");
+                }
+                console.log(user_score);
+            })
+            
+            
+            
+
 
         })
-
+        
+        
+        
     </script>
 
 </body>
